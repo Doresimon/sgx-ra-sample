@@ -50,6 +50,7 @@ enclave {
                                             [in,count=16] uint8_t* gcm_mac);
 
         public void cal_average([out] int *agv);
+        public void read_average([out] int *agv);
     };
 
 };

@@ -355,16 +355,28 @@ int main(int argc, char *argv[])
             PRINT_BYTE_ARRAY(OUTPUT, p_msg1_full->body, p_msg1_full->size);
         }
 
-        fprintf(OUTPUT, "\n############################");
+        fprintf(OUTPUT, "\n\n############################");
         fprintf(OUTPUT, "\n#########Call Avg###########");
         fprintf(OUTPUT, "\n############################");
 
-        int32_t data_arr[] = {1, 2, 3, 4};
+        int32_t data_arr[] = {1, 2, 3, 2};
         int avg=0;
         cal_average(enclave_id, &avg);
 
+        fprintf(OUTPUT, "\n\n############################");
+        fprintf(OUTPUT, "\n#########avg=%d  ############", avg);
+        fprintf(OUTPUT, "\n#########End Call###########");
         fprintf(OUTPUT, "\n############################");
-        fprintf(OUTPUT, "\n#########avg=%d############", avg);
+
+        fprintf(OUTPUT, "\n\n############################");
+        fprintf(OUTPUT, "\n#########Call Get Avg###########");
+        fprintf(OUTPUT, "\n############################");
+
+        int tmp_avg=0;
+        cal_average(enclave_id, &tmp_avg);
+
+        fprintf(OUTPUT, "\n\n############################");
+        fprintf(OUTPUT, "\n#########avg=%d  ############", tmp_avg);
         fprintf(OUTPUT, "\n#########End Call###########");
         fprintf(OUTPUT, "\n############################");
 
