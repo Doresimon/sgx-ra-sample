@@ -49,8 +49,7 @@ enclave {
                                             uint32_t secret_size,
                                             [in,count=16] uint8_t* gcm_mac);
 
-
-        public int32_t cal_average();
+        public void cal_average(void);
     };
 
 };
