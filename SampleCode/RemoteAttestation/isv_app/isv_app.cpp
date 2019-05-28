@@ -279,7 +279,7 @@ int main(int argc, char *argv[])
         fprintf(OUTPUT, "\n#########Call Avg###########");
         fprintf(OUTPUT, "\n############################");
 
-        int32_t data_arr[] = {1, 2, , 3, 4};
+        int32_t data_arr[] = {1, 2, 3, 4};
         auto avg = cal_average(data_arr);
 
         fprintf(OUTPUT, "\n############################");
