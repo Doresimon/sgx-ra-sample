@@ -71,7 +71,6 @@ void cal_average(int *ret_avg)
     int avg = 0;
     int32_t data[4] = {1, 2, 3, 4};
 
-
     for (int i = 0; i < len; i++)
     {
         avg += data[i];
@@ -86,6 +85,22 @@ void cal_average(int *ret_avg)
 void read_average(int *ret_avg)
 {
     *ret_avg = tmp_avg;
+    return;
+}
+
+void cal_average_with_data(int *ret_avg, int *data)
+{
+    int len = 4;
+    int avg = 0;
+
+    for (int i = 0; i < len; i++)
+    {
+        avg += data[i];
+    }
+
+    avg = avg / 4;
+    *ret_avg = avg;
+    tmp_avg = avg;
     return;
 }
 

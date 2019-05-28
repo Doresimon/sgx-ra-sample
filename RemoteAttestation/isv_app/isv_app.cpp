@@ -360,7 +360,7 @@ int main(int argc, char *argv[])
         fprintf(OUTPUT, "\n############################");
 
         int32_t data_arr[] = {1, 2, 3, 2};
-        int avg=0;
+        int avg = 0;
         cal_average(enclave_id, &avg);
 
         fprintf(OUTPUT, "\n\n############################");
@@ -372,8 +372,21 @@ int main(int argc, char *argv[])
         fprintf(OUTPUT, "\n#########Call Get Avg###########");
         fprintf(OUTPUT, "\n############################");
 
-        int tmp_avg=0;
+        int tmp_avg = 0;
         cal_average(enclave_id, &tmp_avg);
+
+        fprintf(OUTPUT, "\n\n############################");
+        fprintf(OUTPUT, "\n#########avg=%d  ############", tmp_avg);
+        fprintf(OUTPUT, "\n#########End Call###########");
+        fprintf(OUTPUT, "\n############################");
+
+        fprintf(OUTPUT, "\n\n############################");
+        fprintf(OUTPUT, "\n#########Call Avg With Args###########");
+        fprintf(OUTPUT, "\n############################");
+
+        tmp_avg = 0;
+        int data[4] = {4, 5, 4, 3};
+        cal_average(enclave_id, tmp_avg, data);
 
         fprintf(OUTPUT, "\n\n############################");
         fprintf(OUTPUT, "\n#########avg=%d  ############", tmp_avg);
