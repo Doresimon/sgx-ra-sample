@@ -384,7 +384,7 @@ int main(int argc, char *argv[])
         fprintf(OUTPUT, "\n#########Call Avg With Args###########");
         fprintf(OUTPUT, "\n############################");
 
-        tmp_avg = 0;
+        tmp_avg = 666;
         int *data = (int *)malloc(sizeof(int) * 4);
         data[0] = 4;
         data[1] = 4;
@@ -396,6 +396,17 @@ int main(int argc, char *argv[])
         fprintf(OUTPUT, "\n#########avg=%d  ############", tmp_avg);
         fprintf(OUTPUT, "\n#########avg=%d  ############", data[0]);
         fprintf(OUTPUT, "\n#########End Call###########");
+        fprintf(OUTPUT, "\n############################");
+
+        cal_average(enclave_id, &tmp_avg);
+
+        fprintf(OUTPUT, "\n\n############################");
+        fprintf(OUTPUT, "\n#########avg=%d  ############", tmp_avg);
+        fprintf(OUTPUT, "\n#########End Call###########");
+        fprintf(OUTPUT, "\n############################");
+
+        fprintf(OUTPUT, "\n\n############################");
+        fprintf(OUTPUT, "\n#########Call Avg With Args###########");
         fprintf(OUTPUT, "\n############################");
 
         // The ISV application sends msg1 to the SP to get msg2,

@@ -93,6 +93,8 @@ void cal_average_with_data(int *ret_avg, int *data)
     int len = 4;
     int avg = 0;
 
+    tmp_avg = ret_avg;
+
     for (int i = 0; i < len; i++)
     {
         avg += data[i];
@@ -100,7 +102,6 @@ void cal_average_with_data(int *ret_avg, int *data)
 
     avg = avg / 4;
     *ret_avg = avg;
-    tmp_avg = avg;
     return;
 }
 
