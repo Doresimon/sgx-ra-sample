@@ -50,7 +50,7 @@ enclave {
                                             [in,count=16] uint8_t* gcm_mac);
 
 
-        public int32_t cal_average([in,size=4]int32_t data*);
+        public int32_t cal_average([in,size=4]int32_t* data);
     };
 
 };
