@@ -51,7 +51,8 @@ enclave {
 
         public void cal_average([out] int *agv);
         public void read_average([out] int *agv);
-        public void cal_average_with_data([out] int *agv, [in, count=4] int* data);
+        public void cal_average_with_data([out] int *agv, 
+                                          [in, size=4] int* data);
     };
 
 };
