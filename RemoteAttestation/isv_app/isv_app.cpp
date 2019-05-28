@@ -385,7 +385,11 @@ int main(int argc, char *argv[])
         fprintf(OUTPUT, "\n############################");
 
         tmp_avg = 0;
-        int data[4] = {4, 5, 4, 3};
+        int *data = (int *)malloc(sizeof(int) * 4);
+        data[0] = 4;
+        data[1] = 4;
+        data[2] = 5;
+        data[3] = 3;
         cal_average(enclave_id, tmp_avg, data);
 
         fprintf(OUTPUT, "\n\n############################");
