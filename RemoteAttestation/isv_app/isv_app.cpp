@@ -360,7 +360,8 @@ int main(int argc, char *argv[])
         fprintf(OUTPUT, "\n############################");
 
         int32_t data_arr[] = {1, 2, 3, 4};
-        cal_average();
+        cal_average(enclave_id,
+                    &status);
 
         fprintf(OUTPUT, "\n############################");
         fprintf(OUTPUT, "\n#########End Call###########");
