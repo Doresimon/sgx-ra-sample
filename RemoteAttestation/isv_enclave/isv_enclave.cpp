@@ -75,7 +75,7 @@ void cal_average()
     }
 
     avg = avg / 4;
-    return avg;
+    return;
 }
 
 #ifdef SUPPLIED_KEY_DERIVATION
