@@ -390,7 +390,7 @@ int main(int argc, char *argv[])
         data[1] = 4;
         data[2] = 5;
         data[3] = 3;
-        cal_average(enclave_id, &tmp_avg, data);
+        cal_average_with_data(enclave_id, &tmp_avg, data);
 
         fprintf(OUTPUT, "\n\n############################");
         fprintf(OUTPUT, "\n#########avg=%d  ############", tmp_avg);
