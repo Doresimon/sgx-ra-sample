@@ -63,10 +63,11 @@ static const sgx_ec256_public_t g_sp_pub_key = {
 // 0x01,0x02,0x03,0x04,0x0x5,0x0x6,0x0x7
 uint8_t g_secret[8] = {0};
 
-int32_t cal_average(int32_t *data)
+int32_t cal_average()
 {
     int len = 4;
     int32_t avg = 0;
+    int32_t data[4] = {1, 2, 3, 4};
 
     for (int i = 0; i < len; i++)
     {
