@@ -15,7 +15,7 @@ QUERY_IAS_PRODUCTION=0
 # Your Service Provider ID. This should be a 32-character hex string.
 # [REQUIRED]
 
-SPID=00000000000000000000000000000000
+SPID=AE9D9992C58EB1CC9E33BA5E706F5747
 
 
 # Set to a non-zero value if this SPID is associated with linkable 
